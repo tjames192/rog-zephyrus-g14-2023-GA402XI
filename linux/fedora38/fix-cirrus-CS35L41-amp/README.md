@@ -4,7 +4,8 @@ https://asus-linux.org/wiki/cirrus-amps/
 ## updated grub
 sudo grub2-mkconfig -o /etc/grub2.cfg
 
-## not a complete fix - need to revisit
+## need to revisit
+sound is significantly improved even though getting these firmware error.
 ```
 dmesg | grep CSC35
 [    0.002956] ACPI: Table Upgrade: install [SSDT-CUSTOM- CSC3551]

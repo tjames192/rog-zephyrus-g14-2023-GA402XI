@@ -24,9 +24,12 @@ sudo cp patched_cirrus_acpi.cpio /boot/patched_cirrus_acpi.cpio
 
 ## update grub
 update /etc/default/grub and add the line
+```
 GRUB_EARLY_INITRD_LINUX_CUSTOM="patched_cirrus_acpi.cpio"
+```
+```
 sudo grub2-mkconfig -o /etc/grub2.cfg
-
+```
 ## download necessary firmware, noted: 10431463
 https://gitlab.com/asus-linux/firmware
 run script renamefirmware.sh

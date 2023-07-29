@@ -32,9 +32,11 @@ sudo grub2-mkconfig -o /etc/grub2.cfg
 ```
 ## download necessary firmware, noted: 10431463
 https://gitlab.com/asus-linux/firmware
-run script renamefirmware.sh
-mv cs35l41* /lib/firmware/cirrus
 
+run script renamefirmware.sh
+```
+mv cs35l41* /lib/firmware/cirrus
+```
 ## need to revisit
 sound is significantly improved even though getting these firmware error.
 ```

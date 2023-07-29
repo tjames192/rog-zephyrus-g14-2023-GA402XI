@@ -1,8 +1,32 @@
 # These files were created following the process posted on asus-linux.org
 https://asus-linux.org/wiki/cirrus-amps/
 
-## updated grub
+## dump acpi
+mkdir cirrus && cd cirrus
+sudo cat /sys/firmware/acpi/tables/DSDT > dsdt.dat
+iasl -d dsdt.dat
+
+## determin if amp is connected to I2C or SPI
+
+## create ssdt patch - I2CD
+ssdt__I2CD_csc3551.dsl
+
+## install SSDT patch
+iasl -tc ssdt_csc3551.dsl
+mkdir -p kernel/firmware/acpi
+cp ssdt_csc3551.aml kernel/firmware/acpi
+find kernel | cpio -H newc --create > patched_cirrus_acpi.cpio
+sudo cp patched_cirrus_acpi.cpio /boot/patched_cirrus_acpi.cpio
+
+## update grub
+update /etc/default/grub and add the line
+GRUB_EARLY_INITRD_LINUX_CUSTOM="patched_cirrus_acpi.cpio"
 sudo grub2-mkconfig -o /etc/grub2.cfg
+
+## download necessary firmware, noted: 10431463
+https://gitlab.com/asus-linux/firmware
+run script renamefirmware.sh
+mv cs35l41* /lib/firmware/cirrus
 
 ## need to revisit
 sound is significantly improved even though getting these firmware error.

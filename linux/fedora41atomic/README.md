@@ -6,7 +6,7 @@ https://gitlab.freedesktop.org/drm/amd/-/issues/3388
 rpm-ostree kargs --append=amdgpu.dcdebugmask=0x10
 hopefully not needed post kernel 6.13.x
 
-## connecting to meraki l2tp vpn
+# connecting to meraki l2tp vpn
 rpm-ostree uninstall libreswan
 rpm-ostree install NetworkManager-l2tp strongswan-libipsec strongswan
 

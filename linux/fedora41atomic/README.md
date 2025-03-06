@@ -34,6 +34,8 @@ sudo update-crypto-policies --set DEFAULT:SHA1
 ## powershell 
 distrobox-create --image ghcr.io/ublue-os/powershell-toolbox --name pwsh
 
+distrobox-upgrade --all
+
 distrobox enter pwsh
 
 distrobox-export --app pwsh

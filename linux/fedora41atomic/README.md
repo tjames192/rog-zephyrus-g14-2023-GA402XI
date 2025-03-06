@@ -46,3 +46,40 @@ mkdir -p /home/$user/.local/share/powershell/PSReadLine
 
 touch /home/$user/.local/share/powershell/PSReadLine/ConsoleHost_history.txt
 
+## vscode
+settings.json
+
+```
+{
+    "window.titleBarStyle": "custom",
+    "editor.fontFamily": "'Cascadia Code', 'Droid Sans Mono', 'monospace', monospace",
+    "terminal.integrated.automationProfile.linux": {},
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "terminal.integrated.env.linux": {
+    
+    },
+    "terminal.integrated.profiles.linux": {
+
+        "bash": {
+            "path": "bash",
+            "icon": "terminal-bash"
+        },
+        "zsh": {
+            "path": "zsh"
+        },
+        "fish": {
+            "path": "fish"
+        },
+        "tmux": {
+            "path": "tmux",
+            "icon": "terminal-tmux"
+        },
+        "pwsh": {
+            "path": "distrobox",
+            "icon": "terminal-powershell",
+            "args": ["enter", "pwsh"]
+        }
+    }
+}
+```
+

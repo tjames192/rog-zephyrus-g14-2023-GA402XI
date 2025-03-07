@@ -28,6 +28,11 @@ sudo systemctl disable xl2tpd
 
 sudo systemctl mask xl2tpd
 
+## disable selinux
+sudo nano /etc/selinux/config
+
+SELINUX=disabled
+
 ## questionable
 sudo update-crypto-policies --set DEFAULT:SHA1
 

@@ -28,13 +28,9 @@ sudo systemctl disable xl2tpd
 
 sudo systemctl mask xl2tpd
 
-find the ipsec.conf file
+https://williamlieurance.com/cisco-strongswan-vpn-sha1-signatures/
 
-journalctl --no-hostname _SYSTEMD_UNIT=NetworkManager.service + SYSLOG_IDENTIFIER=pppd | grep -i ipsec.conf
-
-add ikev1-policy=accept ?
-
-sudo nano ... ipsec.conf
+update-crypto-policies --set DEFAULT:SHA1
 
 ## disable selinux
 sudo nano /etc/selinux/config

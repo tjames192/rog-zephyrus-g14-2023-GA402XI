@@ -2,6 +2,13 @@ these instructions / notes should be able to be applied to any most derivatives 
 ublue bazzite / aurora dx
 
 ## enable hugepages?
+https://wiki.debian.org/Hugepages
+
+https://oracle-base.com/articles/linux/configuring-huge-pages-for-oracle-on-linux-64
+
+https://www.netdata.cloud/blog/understanding-huge-pages/
+
+https://dev.to/sergelogvinov/proxmox-hugepages-for-vms-1fh3
 ```
 cat /proc/cpuinfo | grep pdpe1gb
 ```

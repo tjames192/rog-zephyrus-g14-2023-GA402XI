@@ -1,6 +1,15 @@
 these instructions / notes should be able to be applied to any most derivatives of fedora 41 atomic desktops including
 ublue bazzite / aurora dx
 
+## enable hugepages?
+```
+cat /proc/cpuinfo | grep pdpe1gb
+```
+```
+rpm-ostree kargs --append=hugepagesz=1G hugepages=1 default_hugepagesz=1G
+```
+
+
 ## fix amd graphical artifacts
 https://gitlab.freedesktop.org/drm/amd/-/issues/3388
 

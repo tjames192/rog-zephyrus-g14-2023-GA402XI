@@ -5,7 +5,10 @@ installed rog-control-center, asusctl
 
 installed waterfox-bin
 
-optimistic changes keep power efficiency lowish (browsing ~20w, maybe can be lower) 
+optimistic changes keep power efficiency lowish (browsing ~20w, maybe can be lower)
+
+idle ~12w
+
 ## Optimize the CPU Governor
 ### limine config
 ```

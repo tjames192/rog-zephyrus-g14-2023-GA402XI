@@ -19,3 +19,13 @@ sudo limine-mkinitcpio
 ```
 echo 'ACTION=="add", SUBSYSTEM=="drm", DRIVERS=="amdgpu", ATTR{device/power_dpm_force_performance_level}="low"' | sudo tee /etc/udev/rules.d/30-amdgpu-low-power.rules && sudo udevadm control --reload-rules && sudo udevadm trigger
 ```
+
+## rog-control-center
+## system control tunables
+defaults
+|config|value|
+|-|-|
+cpu sustained power limit| 35
+cpu turbo power limit| 65
+cpu fast burst power limit| 80
+gpu temperature limit| 87

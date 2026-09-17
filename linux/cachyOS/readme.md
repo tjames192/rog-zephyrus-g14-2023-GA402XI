@@ -1,5 +1,5 @@
 # changes
-installed kernel cacyos-znver4/linux-cachyos-eevdf
+installed kernel cachyos-znver4/linux-cachyos-eevdf
 
 installed rog-control-center, asusctl
 

@@ -29,3 +29,11 @@ cpu sustained power limit| 35
 cpu turbo power limit| 65
 cpu fast burst power limit| 80
 gpu temperature limit| 87
+
+updated
+|config|value|
+|-|-|
+cpu sustained power limit| 15
+cpu turbo power limit| 25
+cpu fast burst power limit| 35
+gpu temperature limit| 75

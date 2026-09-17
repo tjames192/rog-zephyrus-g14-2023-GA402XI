@@ -1,6 +1,8 @@
 # changes
 installed kernel cacyos-znver4/linux-cachyos-eevdf
+
 installed rog-control-center, asusctl
+
 installed waterfox-bin
 
 optimistic changes keep power efficiency lowish (browsing ~20w, maybe can be lower) 
@@ -12,6 +14,13 @@ echo 'KERNEL_CMDLINE[default]+=" amd_pstate=active"' | sudo tee -a /etc/default/
 
 # 2. Regenerate the Limine boot entries using the CachyOS tool script
 sudo limine-mkinitcpio
+```
+verify
+```
+cat /sys/class/drm/card*/device/power_dpm_force_performance_level
+```
+``` output
+low
 ```
 
 ## Lower iGPU Power Limits via AMDGPU Driver
